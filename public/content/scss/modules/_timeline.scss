@@ -1,0 +1,169 @@
+.section-timeline {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 140px 0;
+    @include small {
+        display: block;
+        margin: 80px auto;
+        max-width: 550px;
+    }
+    .timeline-item {
+        position: relative;
+        width: 14.28%;
+        &:after {
+            content: "";
+            background-color: $body-color;
+            height: 4px;
+            left: 91px;
+            width: 152px;
+            @include vertically-centered();
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        &:hover {
+            .timeline-item-marker {
+                @include scale(1);
+            }
+            .timeline-item-bubble {
+                background-color: #fff;
+                padding: 30px;
+                @include shadow(0 0 8px 0 rgba(0, 0, 0, 0.12));
+                &:before {
+                    top: -8px;
+                    @include horizontally-centered();
+                    @include triangle($direction: bottom, $color: #fff, $size: 8px)
+                }
+
+                .bubble-heading {
+                    color: $theme-color;
+                }
+            }
+        }
+        &:nth-child(even) {
+            .timeline-item-bubble {
+                top: inherit;
+                bottom: 45px;
+                .bubble-heading {
+                    margin-bottom: 10px;
+                    margin-top: 0;
+                }
+            }
+            &:hover {
+                .timeline-item-bubble {
+                    &:before {
+                        top: inherit;
+                        bottom: -8px;
+                        border-bottom: none;
+                        @include triangle($direction: top, $color: #fff, $size: 8px);
+                    }
+                }
+            }
+        }
+        @include small {
+            width: 100%;
+            position: relative;
+            text-align: left;
+            margin: 15px 0;
+            &:after {
+                height: 152px;
+                left: 0;
+                width: 4px;
+                top: 57px;
+                display: block !important;
+            }
+            &:hover {
+                .timeline-item-bubble:after {
+                    display: block;
+                }
+            }
+            .timeline-item-marker {
+                position: absolute;
+                left: -12px;
+                top: calc(50% - 22px);
+                transform: translate(0, -50%) scale(1) !important;
+            }
+            .timeline-item-bubble {
+                position: static;
+                top: -25px !important;
+                padding: 30px;
+                width: calc(100% - 30px);
+                position: relative;
+                left: 30px;
+                bottom: inherit !important;
+                display: flex;
+                flex-wrap: wrap;
+                @include transform(none);
+                &:before {
+                    display: none !important;
+                }
+                &:after {
+                    left: -8px;
+                    display: none;
+                    @include vertically-centered();
+                    @include triangle($direction: right, $color: #fff, $size: 8px);
+                }
+                .bubble-text {
+                    width: 100%;
+                    order: 1;
+                }
+                .bubble-heading {
+                    margin-top: 0 !important;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .timeline-item-bubble {
+        padding: 0 30px;
+        font-size: 14px;
+        top: 45px;
+        width: 100%;
+        @include horizontally-centered();
+        @include transition(350ms);
+        .bubble-text {
+            margin: 0;
+        }
+        .bubble-heading {
+            font-weight: 500;
+            margin-top: 10px;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+    }
+
+    .timeline-item-marker {
+        background: url(../images/timeline-marker.svg) no-repeat;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto;
+        cursor: pointer;
+        display: block;
+        background-size: contain;
+        z-index: 1;
+        position: relative;
+        @include scale(0.63);
+        @include transition(350ms);
+    }
+
+    @include small {
+        display: block;
+        .timeline-item {
+            width: 100%;
+        }
+        .timeline-item-marker {
+            margin: 0;
+        }
+    }
+    &.theme2 {
+        .timeline-item::after {
+            background-color: #fff;
+        }
+        .timeline-item:hover {
+            color: $body-color;
+        }
+    }
+}

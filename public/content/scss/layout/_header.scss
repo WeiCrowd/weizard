@@ -1,0 +1,30 @@
+#header {
+    padding: 25px 0;
+    position: relative;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    @include transition(350ms);
+     @include large {
+        padding: 33px 0;
+    }
+    @include extra-small {
+        padding: 15px 0;
+    }
+    &.has-shadow {
+        @include shadow(0 0 4px 0 rgba(0, 0, 0, 0.24));
+    }
+    &.scrolled {
+        padding: 13px 0;
+        background-color: $theme-color;
+        @include shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    }
+    
+    .logo {
+        @include large {
+        margin-top: 6px;  
+        }
+    }
+}

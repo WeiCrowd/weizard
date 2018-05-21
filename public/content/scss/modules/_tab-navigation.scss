@@ -1,0 +1,77 @@
+.tab-navigation {
+    @include extra-small-alt {
+    .tab-head {
+        display: block !important;
+    }
+    .nav-trigger {
+        display: none  !important;
+    }
+        }
+    .tab-head-item {
+        color: #8a92a7;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        cursor: pointer;
+        margin-left: 30px;
+        @include small {
+            font-size: 13px;
+            margin-left: 9px;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        &:after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -19px;
+            left: 0;
+        }
+        &.active {
+            color: $text-color;
+            &:after {
+                background-color: $theme-color;
+            }
+        }
+    }
+    &.is-responsive {
+        @include extra-small {
+            .tab-head {
+                display: none;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 70px;
+                margin: 0;
+                z-index: 2;
+                padding: 10px;
+                background-color: #fff;
+                @include shadow( 0 0 12px 2px rgba(0, 0, 0, 0.08));
+            }
+            .tab-head-item {
+                display: block;
+                padding: 10px 0;
+                margin-left: 0;
+                text-align: center;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .nav-trigger-text {
+        display: inline-block;
+        position: relative;
+        &:after {
+            content: "";
+            background: url(../images/svg-sprite.svg) no-repeat -17px -1391px;
+            position: absolute;
+            width: 12px;
+            height: 7px;
+            top: 6px;
+            right: -20px;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.listing-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -20px;
+    width: calc(100% + 40px);
+    @include clearfix();
+    /*@include small {
+        width: calc(100% + 20px);
+    }*/
+    @include small {
+        width: 100%;
+        margin-left: 0;
+    }
+    .listing-box {
+        width: calc(20% - 40px);
+        margin: 20px;
+        @include small {
+            width: calc(33.33% - 20px);
+            margin: 20px 10px;
+        }
+        @include extra-small {
+            width: 100% !important;
+            margin: 20px 0;
+        }
+    }
+    &.has-four-items {
+        .listing-box {
+            width: calc(25% - 40px);
+            @include small {
+                width: calc(33.33% - 20px);
+                margin: 20px 10px;
+            }
+        }
+    }
+}
+
+.listing-box {
+    background-color: #fff;
+    text-align: center;
+    font-size: 12px;
+    color: #7f8a96;
+    position: relative;
+    @include border-radius(8px);
+    @include shadow(0 0 12px 2px rgba(0, 0, 0, 0.08));
+    @include transition(350ms);
+    &:hover {
+        @include translate(0, -5px);
+    }
+    > a {
+        display: block;
+        padding: 26px 12px;
+    }
+    .listing-box-heading {
+        color: $body-color;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .listing-box-text {
+        margin-bottom: 0;
+        color: #7f8a96;
+    }
+    &.theme2 {
+        min-height: 204px;
+        font-weight: 500;
+        line-height: 1.5;
+        @include border-radius(5px);
+        > a {
+            padding: 25px 15px;
+            height: 100%;
+        }
+        .listing-box-figure {
+            min-height: 50px;
+        }
+    }
+    &.has-animated-link {
+        &:hover {
+            .listing-box-link {
+                bottom: -20px;
+                opacity: 1;
+            }
+        }
+        .listing-box-link {
+            bottom: -25px;
+            opacity: 0;
+            @include transition(350ms);
+            @include horizontally-centered();
+        }
+    }
+}

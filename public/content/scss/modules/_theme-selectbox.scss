@@ -1,0 +1,89 @@
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: $text-color;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid $form-border-color;
+    background: #fff;
+    height: 48px;
+    outline: none !important;
+    padding: 9px 23px 0 5px;
+    @include border-radius(3px);
+} 
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    background: url(../images/svg-sprite.svg) no-repeat -17px -1391px;
+    width: 12px;
+    height: 7px;
+    top: 22px;
+    right: 10px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    display: none;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent $theme-color transparent;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+    font-size: 14px;
+}
+
+.select2-container--open .select2-dropdown {
+    border-color: #e6e6e6;
+    text-transform: capitalize;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: $theme-color;
+}
+
+.select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: #e6e6e6;
+    color: #555555;
+}
+
+.selectbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include extra-small {
+        display: block;
+    }
+    .selectbox-group-heading {
+        margin-bottom: 0;
+        margin-right: 15px;
+        font-size: 20px;
+        @include extra-small {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    .selectbox-group-list {
+        display: flex;
+        .select2-container--default .select2-selection--single {
+            border-left: none;
+            @include border-radius(0);
+        }
+        li:first-child {
+            .select2-container--default .select2-selection--single {
+                border-left: 1px solid $form-border-color;
+                @include border-radius(3px 0 0 3px);
+            }
+        }
+        li:last-child {
+            .select2-container--default .select2-selection--single {
+                @include border-radius(0 3px 3px 0);
+            }
+        }
+    }
+}

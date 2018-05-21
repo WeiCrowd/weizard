@@ -1,0 +1,91 @@
+.form-check {
+    position: relative;
+    display: inline-block;
+    .form-check-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-right: 15px;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: $text-color;
+        font-weight: normal;
+        text-align: left;
+        &:before {
+            content: "";
+            background-image: url(../images/svg-sprite.svg);
+            background-position: -7px -967px;
+            display: inline-block;
+            @include square(20px);
+            @include position(absolute, $left: 0, $top: -2px);
+        }
+    }
+    .form-check-input {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        cursor: pointer;
+        @include square(100%);
+        &:checked + label:before {
+             background-position: -11px -1027px;
+        }
+    }
+    &.form-control {
+        padding: 0;
+        &.has-icon {
+            height: auto;
+            .form-check-label {
+                padding: 20px;
+            }
+        }
+        .form-check-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 0;
+            color: #a4a8b1;
+            font-weight: normal;
+            width: 100%;
+            font-size: 13px;
+            min-height: 100%;
+            padding: 0;
+            text-align: center;
+            .form-check-icon {
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+            }
+            .text {
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 15px;
+                color: $body-color;
+                text-transform: uppercase;
+            }
+            &:before {
+                display: none;
+            }
+        }
+        .form-check-input {
+            margin: 0;
+            &:checked + label {
+                background-color: $theme-color;
+                color: #fff;
+                .text {
+                    color: #fff;
+                }
+                .startup-icon {
+                    background-position: -3px -66px;
+                }
+                .investor-icon {
+                    background-position: -6px -239px;
+                }
+            }
+        }
+    }
+
+}

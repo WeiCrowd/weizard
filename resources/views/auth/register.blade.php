@@ -1,0 +1,126 @@
+@extends('layouts.plane')
+
+@section('content')
+@php
+$arrCountry = App\Helpers\Helper::getAlCountries();
+@endphp
+<div id="container" class="dashboard-area">
+       
+       <!-- Dashboard Content -->
+            <div class="dashboard-content">
+            
+            
+        <div class="login-form-wrap text-center">
+            <a href="{{ url('/')}}" class="logo"><img width="220" src="content/images/logo-alt.svg" alt="Logo" /></a>
+
+                <!-- Box -->
+                <div class="box login-box">
+                    <h1 class="box-heading">SignUp</h1>
+
+                    <!-- Form -->
+                    <form class="form-horizontal" method="POST" id="register_form" action="{{ route('startup_saveregister') }}">
+                        {{ csrf_field() }}
+                    <div class="form">
+                        <div class="form-group">
+                            <ul class="list-inline flex-box flex-col-2">
+                                
+                                <li class="flex-col">
+                                    <div class="form-check has-icon form-control">
+                                        <input name="icoType" class="form-check-input" type="radio" disabled="true" value="investor">
+                                        <label class="form-check-label">
+                                    <span class="form-check-icon">
+                                    <i class="investor-icon svg-sprite"></i>
+                                    </span>
+                                    <span class="text">Token Buyer</span>
+                                    </label>
+                                    </div>
+                                </li>
+                                <li class="flex-col">
+                                    <div class="form-check has-icon startup-check form-control">
+                                        <input name="icoType" class="form-check-input" type="radio"  checked="true" value="startup">
+                                        <label class="form-check-label">
+                                    <span class="form-check-icon">
+                                    <i class="startup-icon  svg-sprite"></i>
+                                    </span>
+                                    <span class="text">STARTUP</span>
+                                    </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::text('name', '', ['class' => 'form-control','placeholder'=>Lang::get('common.Name'),'id'=>'name', 'autofocus'=>true]) }}
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::text('email', '', ['class' => 'form-control','placeholder'=>Lang::get('common.Email'),'id'=>'email']) }}
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            {{ Form::password('password', ['class' => 'form-control','placeholder'=>Lang::get('common.Password') , 'id' => 'password']) }}
+                            <span class="text-danger">{{ $errors->first('password') }}</span>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::password('password_confirmation', ['class' => 'form-control','placeholder'=>Lang::get('common.Confirm_Password'),'id'=>'confirm_password']) }}
+                            <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
+                            
+                        </div>
+                        <div class="form-group">
+                            {{ Form::tel('mobile',@$data->mobile, ['class' => 'form-control','id'=>'phone','placeholder'=>Lang::get('common.Mobile')]) }}
+                            <span class="text-danger">{{ $errors->first('mobile') }}</span>
+                               
+                        </div>
+                        
+                        <div class="form-group">
+                           {{ Form::select('citizenship',[''=>'Select Country']+@$arrCountry,'', ['class' => 'form-control' , 'id' => 'citizenship']) }}
+                            <span class="text-danger">{{ $errors->first('citizenship') }}</span>
+                        </div>
+                        
+                       
+                        <div class="form-group">
+                            <div class="g-recaptcha recaptcha-bx" data-sitekey="{{ env('CAPTCHA_SITEKEY') }}"></div>
+                            <span class="text-danger">{{ $errors->first('captcha') }}</span>
+                        </div>
+                        
+                        
+                        
+                        <div class="form-group">
+                            <button type="submit" class="primary-btn theme2-btn marB20 full-width">
+                                    SignUp
+                                </button>
+                            
+                            <small class="form-note">Signing up signifies you have read and agree to our <a class="text-link" href="#" target="_blank">Terms of Service</a> and <a class="text-link" href="#" target="_blank">Privacy Policy</a></small>
+                        </div>
+                    </div>
+                    </form>
+                    <!-- Form -->
+
+                </div>
+                <!-- Box -->
+
+                <p class="marB0 marT20">Already have an account? <a href="{{ url('/login')}}">Login</a></p>
+
+            </div>
+        </div>
+        <!-- Dashboard Content -->
+
+    </div>
+
+
+@endsection
+@section('jscript')
+<script type="text/javascript">
+$(document).ready(function () {
+    $('input[type="radio"]').click(function(){
+        if($(this).val() == 'startup'){
+                $('#register_form').attr('action', '/startup-saveregister');
+            }else{
+                $('#register_form').attr('action', '/register');
+            }
+    });
+    
+    
+});
+</script>
+@endsection

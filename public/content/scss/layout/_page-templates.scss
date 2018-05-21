@@ -1,0 +1,20 @@
+.page-template2 {
+    #header {
+        background-color: #fff;
+    } 
+    #main-navigation .menu > li > a {
+        color: $theme-color;
+        &.white-btn {
+            @include large {
+                margin-left: -20px;
+            }
+            @include medium {
+                color: #fff !important;
+            }
+        }
+    }
+    
+    #MobileMenu .line {
+        background-color: $theme-color;
+    }
+}

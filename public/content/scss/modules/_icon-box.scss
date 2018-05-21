@@ -1,0 +1,13 @@
+.icon-box {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    background-color: $theme-color-light;
+    @include transition(350ms);
+    &:hover {
+        background-color: $theme-color;
+        @include shadow(0 0 12px 4px rgba(0, 0, 0, 0.3));
+    }
+}

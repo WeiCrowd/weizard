@@ -1,0 +1,18 @@
+.ui-slider {
+    height: 4px;
+    background: #ebecf0;
+    border-color: #ebecf0 !important;
+    @include border-radius(2px);
+    .ui-widget-header {
+        background: $theme-color;
+    }
+    .ui-slider-handle {
+        background: url(../images/svg-sprite.svg) no-repeat -20px -2022px;
+        width: 26px;
+        height: 26px;
+        border: none;
+        top: -11px;
+        cursor: col-resize;
+        outline: none !important;
+    }
+}

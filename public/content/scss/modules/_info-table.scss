@@ -1,0 +1,46 @@
+.info-table {
+    display: flex;
+    background-color: $body-color;
+    color: #fff;
+    font-size: 14px;
+    @include border-radius(5px);
+    @include extra-small {
+        display: block;
+    }
+    .info-table-part {
+        width: 50%;
+        border-right: 1px solid rgba(255, 255, 255, 0.37);
+        @include extra-small {
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.37);
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+    .info-table-part-heading,
+    .info-table-list-heading,
+    .info-table-list li {
+        padding: 24px 0;
+        margin: 0;
+        height: 73px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.37);
+        @include extra-small {
+            padding: 20px 15px;
+            border-bottom: none;
+            height: inherit;
+        }
+    }
+    .info-table-part-heading {
+        @include extra-small {
+            font-size: 20px;
+        }
+    }
+
+    div[class^="col"] {
+        padding: 0;
+    }
+    .row {
+        margin: 0;
+    }
+}

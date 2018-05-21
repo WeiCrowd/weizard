@@ -1,0 +1,30 @@
+.progress {
+    height: 30px;
+    margin: 0;
+    @include border-radius(6px);
+    .progress-bar {
+        background-color: $theme-color;
+        position: relative;
+        @include border-radius(6px);
+    }
+    .progress-value {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.progress-wrapper {
+    .progress-heading-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .progress-heading {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.73;
+    }
+}

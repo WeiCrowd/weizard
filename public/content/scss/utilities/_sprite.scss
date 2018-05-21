@@ -1,0 +1,95 @@
+.svg-sprite {
+    display: inline-block;
+    background-image: url(../images/svg-sprite.svg);
+    &.startup-icon {
+        background-position: -4px -1px;
+        width: 43px;
+        height: 50px;
+    }
+    &.investor-icon {
+        background-position: -4px -152px;
+        width: 48px;
+        height: 35px;
+    }
+    &.thumbs-up-big {
+       background-position: 0px -322px;
+        width: 63px;
+        height: 65px; 
+    }
+     &.dashboard-nav-icon {
+       background-position: -7px -445px;
+        width: 17px;
+        height: 17px; 
+    }
+    &.account-nav-icon {
+       background-position: -6px -610px;
+        width: 17px;
+        height: 17px; 
+    }
+    &.two-fa-nav-icon {
+       background-position: -6px -683px;
+        width: 17px;
+        height: 17px; 
+    }
+    &.order-history-nav-icon {
+       background-position: -6px -558px;
+        width: 17px;
+        height: 17px; 
+    }
+    &.offers-nav-icon {
+       background-position: -7px -648px;
+        width: 17px;
+        height: 17px; 
+    }
+    &.referrals-nav-icon {
+       background-position: -9px -504px;
+        width: 17px;
+        height: 17px; 
+    }
+    &.weicrowd-circle-icon {
+       background-position: -8px -885px;
+        width: 40px;
+        height: 33px;  
+    }
+    &.ethereum-circle-icon {
+       background-position: -1px -807px;
+        width: 33px;
+        height: 33px;  
+    }
+    &.bitcoin-circle-icon {
+       background-position: -5px -733px;
+        width: 33px;
+        height: 33px;  
+    }
+    &.site-popup-close {
+        background-position: -15px -1094px;
+    }
+    &.manage-ico-nav-icon {
+        width: 17px;
+        height: 17px;
+       background-position: -13px -1138px; 
+    }
+    &.long-arrow-right {
+        background-position: -2px -1254px;
+        @include square(46px);
+    }
+    &.telegram-nav {
+        background-position: -17px -1325px;
+        @include square(12px);
+    }
+    &.bitcoin-icon-small {
+        background-position: -32px -2888px;
+        @include square(32px);
+    }
+     &.ethereum-icon-small {
+        background-position: -27px -2796px;
+        @include square(32px);
+    }
+}
+
+
+.shapeshift-icon-small {
+    display: inline-block;
+   background: url(../images/shapeshift-icon-small.png) no-repeat;
+    @include square(32px);
+}

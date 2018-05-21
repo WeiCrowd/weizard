@@ -1,0 +1,113 @@
+.panel {
+    border: none;
+    display: flex;
+    max-width: 920px;
+    min-height: 600px;
+    @include border-radius(0);
+    @include shadow(none);
+    @include extra-small {
+        display: block;
+    }
+    .panel-aside,
+    .panel-main {
+        padding: 40px 30px;
+        @include extra-small {
+            padding: 15px;
+        }
+    }
+    .panel-aside {
+        flex: 1;
+        border-right: 1px solid #d8d8d8;
+        text-align: center;
+        color: #7f92a6;
+        font-size: 12px;
+        @include extra-small {
+            border-right: none;
+        }
+        .panel-aside-item {
+            &:after,
+            &:before {
+                content: "";
+                display: none;
+                width: 32px;
+                height: 2px;
+                background-color: #d8dee4;
+                margin: 0 auto;
+                @include extra-small {
+                    display: none !important;
+                }
+            }
+            &.has-border-bottom {
+                &:after {
+                    display: block;
+                    margin-top: 20px;
+                }
+            }
+            &.has-border-top {
+                &:before {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .panel-aside-center {
+            margin: 130px 0;
+            @include extra-small {
+                margin: 30px 0;
+            }
+        }
+    }
+
+    .panel-aside-heading {
+        font-size: 14px;
+        margin: 10px 0;
+        color: #516378;
+    }
+    .panel-aside-text {
+        line-height: 2;
+    }
+    .text-link {
+        color: #a4a8b1;
+        text-decoration: none;
+    }
+    .save-link {
+        color: #516378;
+    }
+    .panel-main {
+        flex: 2.4;
+        display: flex;
+        flex-wrap: wrap;
+        .form-group-wrap, .panel-main-btns {
+            width: 100%;
+        }
+        .panel-main-btns {
+            align-self: flex-end;
+            @include extra-small {
+                width: calc(100% + 15px)
+            }
+        }
+    }
+    
+    .form-team-block {
+        position: relative;
+        &:first-of-type {
+            .form-team-block-remove {
+                display: none;
+            }   
+        }
+    }
+    .form-team-block-remove {
+        position: absolute;
+        right: 33px;
+        top: 10px;
+        z-index: 1;
+        color: #a4a8b1;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .primary-btn {
+        @include extra-small {
+            min-width: 140px;
+        }
+    }
+}

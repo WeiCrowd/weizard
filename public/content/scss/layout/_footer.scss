@@ -1,0 +1,51 @@
+#footer {
+    padding: 40px 0 30px;
+    font-size: 14px;
+    color: $text-color;
+    position: relative;
+    @include small {
+        padding: 40px 0;
+    }
+    @include extra-small {
+        padding: 0 0 20px 0;
+    }
+    .footer-item {
+        margin-top: 30px;
+    }
+    .footer-item-heading {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $theme-color;
+        margin-bottom: 30px;
+        @include extra-small {
+            margin-bottom: 10px;
+        }
+    }
+    .footer-links {
+        li {
+            margin-bottom: 13px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        a {
+            color: $text-color;
+            @include transition(350ms);
+            &:hover,
+            &:focus {
+                color: $theme-color;
+                text-decoration: underline;
+            }
+        }
+    }
+    .social-icons {
+        margin-top: -15px;
+        @include extra-small {
+            margin-top: 10px;
+            text-align: left;
+        }
+        .social-icon {
+            margin: 0;
+        }
+    }
+}

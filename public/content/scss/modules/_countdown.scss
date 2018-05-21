@@ -1,0 +1,65 @@
+.countdown-block {
+    display: flex;
+    justify-content: space-around;
+    .countdown-col {
+        background-color: #0d4abd;
+        padding: 20px 15px;
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 14px;
+        width: calc(25% - 15px);
+        text-align: center;
+        @include border-radius(6px);
+        @include small {
+            padding: 15px 10px;
+        }
+        @include extra-small {
+            font-size: 12px;
+        }
+    }
+    .countdown-time {
+        font-weight: 600;
+        font-size: 40px;
+        display: block;
+        margin-bottom: 5px;
+        @include small {
+            font-size: 30px;
+        }
+    }
+    
+    &.theme2 {
+        .countdown-col {
+            background-color: #282d47;
+            color: #26cb6d;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 9px 2px;
+            min-width: 78px;
+            text-transform: uppercase;
+            margin-left: 20px;
+            letter-spacing: 1px;
+            @include border-radius(8px);
+            @include extra-small {
+                margin-left: 10px;
+                font-size: 10px;
+                min-width: 65px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        .countdown-time {
+            font-size: 36px;
+            line-height: 1;
+            letter-spacing: normal;
+            @include extra-small {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.countdown-heading {
+    letter-spacing: 2px;
+    font-size: 13px;
+}

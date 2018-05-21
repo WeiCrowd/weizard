@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>About skLib.lightbox</title>
+
+	<style>
+		html, body { margin: 0; padding: 0; border: none; font-size: 14px; background: #fff; font-family: Segoe UI, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+		.pageColumn { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+		h1 { font-weight: bold; font-size: 30px; margin: 0 0 30px 0; text-align: center; line-height: 100%; font-family: 'Segoe UI Mono', Consolas, Courier New, Courier, monospace; }
+		h2 { font-weight: 400; font-size: 48px; font-style: italic; margin: 0 0 30px 0; text-align: center; line-height: 100%; text-transform: lowercase; }
+		h3 { font-weight: 600; font-size: 28px; text-align: center; margin: 0 0 20px 0; }
+		h4 { font-weight: bold; font-size: 1em; text-align: left; margin: 0 0 .75em 0; }
+
+		a { color: inherit; }
+
+		h2 a { text-decoration: none; }
+		h2 a span { display: inline-block; border-bottom: 1px solid #000; }
+
+		.feature {  margin: 0 0 10px 0; }
+		.feature:after { content: ""; display: block; clear: both; }
+		.feature b { display: block; font-size: 18px; font-weight: 700; text-align: right; width: 33%; float: left; line-height: 100%; }
+		.feature span { font-size: 14px; font-weight: 400; text-align: left; width: 67%; float: right; padding-left: 10px; padding-top: 1px; box-sizing: border-box; }
+
+		.separator, .delimiter { max-width: 200px; margin: 60px auto 60px auto; border-top: 4px solid #000; }
+		.separator + h2, .delimiter + h2 { margin-top: -10px; }
+		.spacer { height: 30px; }
+		.spacer2 { height: 60px; }
+		.spacer-p { height: .75em; }
+
+		p, ul, ol { margin-top: 0; margin-bottom: 0; }
+		p+p, ul+p, ul+ul, ul+ol, ol+p, ol+ul, ol+ol { margin-top: .75em; }
+
+		code { display: inline-block; font-family: 'Segoe UI Mono', Consolas, 'Courier New', monospace; font-size: inherit; text-decoration: inherit; letter-spacing: -.04em; }
+		.exampleCode {
+			display: block; background: #eee; padding: 10px; font-family: Consolas, 'Courier New', monospace; white-space: pre-wrap; font-size: .8125em;
+			box-shadow: 0 1px 1px 1px rgba(0,0,0,.25), 0 1px 8px rgba(0,0,0,.5), 0 0 40px rgba(0,0,0,.08) inset;
+			background: -moz-linear-gradient(-45deg, #eeeeee 0%, #f5f5f5 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#eeeeee), color-stop(100%,#f5f5f5)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(-45deg, #eeeeee 0%,#f5f5f5 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(-45deg, #eeeeee 0%,#f5f5f5 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(-45deg, #eeeeee 0%,#f5f5f5 100%); /* IE10+ */
+			background: linear-gradient(135deg, #eeeeee 0%,#f5f5f5 100%); /* W3C */
+		}
+		.code-black { color: #000; }
+		.code-blue { color: #00f; }
+		.code-dred { color: #800; }
+		.code-red { color: #f00; }
+		.code-green { color: #060; }
+		.highlight { background: #ff0; }
+
+		table { border-collapse: collapse; border-spacing: 0; border: none; }
+		td { padding: 0; }
+
+		.attributeList td { vertical-align: top; }
+		.attributeList tr + tr td { padding-top: .75em; }
+		.attributeList tr td:first-child code { white-space: nowrap; }
+		.attributeList td + td { padding-left: 1em; }
+		.tableScroll { min-width: 1px; min-height: 1px; overflow-y: visible; overflow-x: auto; margin: 0 -20px 0 -20px; padding: 0 20px 0 20px; }
+
+	</style>
+
+</head>
+<body>
+	<div class="pageColumn">
+
+
+		<h1>skLib.lightbox</h1>
+
+
+
+
+		<h2>Features</h2>
+
+		<div class="feature"><b>Big</b><span>Minimal chrome graphics to focus on your content and not its frame.</span></div>
+		<div class="feature"><b>Responsive</b><span>Adapts to browser window and resizes with it.</span></div>
+		<div class="feature"><b>More responsive</b><span>Chooses the image best fitting the size of window. (If image variations are configured.)</span></div>
+		<div class="feature"><b>Even more responsive</b><span>Quick animations and preload of the next slide's image don't leave users waiting.</span></div>
+		<div class="feature"><b>Touch</b><span>Swipe through a gallery on any touch-screen. (Except for video or iframe.)</span></div>
+		<div class="feature"><b>Keyboard</b><span>Move through a gallery with directional keys.</span></div>
+		<div class="feature"><b>Commands</b><span>Add custom commands, such as save to disk or share.</span></div>
+		<div class="feature"><b>Bi-directional UI</b><span>Interface and behaviour is properly mirrored in right-to-left situations.</span></div>
+		<div class="feature"><b>Scroll lock</b><span>Page scrolling is locked so user is returned to the place he left. (See initialization.)</span></div>
+
+
+
+
+
+		<div class="separator"></div>
+
+
+
+
+
+		<h2><a href="http://sklib.av-studio.si/lightbox/" target="_blank"><span>See demo</span> &raquo;</a></h2>
+
+
+
+
+
+		<div class="separator"></div>
+
+
+
+
+
+		<h2>How to use</h2>
+
+		<h3>Basic implementation</h3>
+		<div>
+
+			<p>Three things must be done to make lightbox work: include JavaScript and CSS files, mark which links should open in lightbox, and initialize the script.</p>
+			<div class="spacer"></div>
+			<h4>1. Include files</h4>
+			<p>
+				Save the skLib.lightbox package &ndash; <code>skLib.lightbox.js</code> and <code>.css</code> files, as well as images &ndash; somewhere among the website's files, for example in <code>/lightbox</code> folder.
+				It doesn't matter where; you'll specify path for the <code>.js</code> and <code>.css</code> files in the <code>script</code> and <code>link</code> tags, and the path to image folder can be changed in initialization call, though <code>/lightbox/images</code> is the default location.
+			</p>
+			<p>jQuery is required, as is <code>imagesLoaded.js</code> file, the lightbox won't work without them. We recommend you also add <code>jquery.event.move.js</code> and <code>jquery.mousewheel.js</code> plugins, but the lightbox will work without them, only the relevant functionalities will be missing if you don't use them.</p>
+			<p>Example (or you can just copy this code):</p>
+			<div class="exampleCode"><span class="code-blue">&lt;</span><span class="code-dred">script</span> <span class="code-red">src</span><span class="code-blue">="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;&lt;/</span><span class="code-dred">script</span><span class="code-blue">&gt;</span>
+<span class="code-blue">&lt;</span><span class="code-dred">script</span> <span class="code-red">src</span><span class="code-blue">="js/imagesLoaded.js"&gt;&lt;/</span><span class="code-dred">script</span><span class="code-blue">&gt;</span>
+<span class="code-blue">&lt;</span><span class="code-dred">script</span> <span class="code-red">src</span><span class="code-blue">="js/jquery.event.move.js"&gt;&lt;/</span><span class="code-dred">script</span><span class="code-blue">&gt;</span>
+<span class="code-blue">&lt;</span><span class="code-dred">script</span> <span class="code-red">src</span><span class="code-blue">="js/jquery.mousewheel.js"&gt;&lt;/</span><span class="code-dred">script</span><span class="code-blue">&gt;</span>
+<span class="highlight"><span class="code-blue">&lt;</span><span class="code-dred">script</span> <span class="code-red">src</span><span class="code-blue">="lightbox/skLib.lightbox.js"&gt;&lt;/</span><span class="code-dred">script</span><span class="code-blue">&gt;</span>
+<span class="code-blue">&lt;</span><span class="code-dred">link</span> <span class="code-red">href</span><span class="code-blue">="lightbox/skLib.lightbox.css"</span> <span class="code-red">rel</span><span class="code-blue">="stylesheet" /&gt;</span></span></div>
+
+			<div class="spacer"></div>
+			<h4>2. Mark links</h4>
+			<p>Though it can be changed in case some other approach fits your site better, by default the lightbox will use all links with CSS class <code>"skLib-lightboxLink"</code>.</p>
+			<p>So a link should look something like this:</p>
+			<div class="exampleCode"><span class="code-blue">&lt;</span><span class="code-dred">a</span> <span class="code-red">href</span><span class="code-blue">="image.jpg"</span> <span class="highlight"><span class="code-red">class</span><span class="code-blue">="skLib-lightboxLink"</span></span><span class="code-blue">&gt;</span>Click to magnify<span class="code-blue">&lt;/</span><span class="code-dred">a</span><span class="code-blue">&gt;</span></div>
+
+			<div class="spacer"></div>
+			<h4>3. Initialize</h4>
+			<p>A simple call of <code>skLib.lightbox.init();</code> should be enough to finish setting up lightbox. But you might want to make sure all external files have finished loading so there isn't a JavaScript error.</p>
+			<p>This should do:</p>
+			<div class="exampleCode"><span class="code-blue">&lt;</span><span class="code-dred">script</span><span class="code-blue">&gt;</span>$(document).ready(<span class="code-blue">function</span> () { <span class="highlight">skLib.lightbox.init();</span> });<span class="code-blue">&lt;/</span><span class="code-dred">script</span><span class="code-blue">&gt;</span></div>
+
+			<div class="spacer"></div>
+			<p>Above snippets will get you the basic functionality. There won't be any descriptions or galleries to browse through quickly though.</p>
+
+			<div class="delimiter"></div>
+			<div class="marginClear"></div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<h3>Link attributes</h3>
+		<div>
+			<h4>General attributes</h4>
+			<div class="tableScroll">
+				<table class="attributeList">
+					<tr>
+						<td><code>href</code></td>
+						<td>Default file reference. <b>Required.</b> You'll need this any way in case JavaScript doesn't execute for some reason. All other attributes are optional.</td>
+					</tr>
+					<tr>
+						<td><code>light-gallery</code></td>
+						<td>Identifying code of the gallery to which the slide belongs. Users can use directional keys on screen and keyboard to move between slides in the same gallery without closing the lightbox.</td>
+					</tr>
+					<tr>
+						<td><code>light-title</code></td>
+						<td>Slide title</td>
+					</tr>
+					<tr>
+						<td><code>light-desc</code></td>
+						<td>Slide description</td>
+					</tr>
+					<tr>
+						<td><code>light-type</code></td>
+						<td>
+							<p>
+								Type of a slide. In almost all cases the lightbox will be able to determine the type correctly, so you can safely ignore it.
+								But in some situations it might be necessary to manually set how the slide should be presented; for example if you want to open a page in iframe, but its URL just happens to end with <code>.jpg</code>.
+							</p>
+							<p>Possible values: <code>image</code>, <code>video</code>, <code>iframe</code>.</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+
+
+
+
+			<div class="spacer"></div>
+			<h4>Image-specific link attributes</h4>
+			<div class="tableScroll">
+				<table class="attributeList">
+					<tr>
+						<td><code>light-width</code>,<br /><code>light-height</code></td>
+						<td>Width and height of the image; default value is <code>10000</code>. This is used by the custom <code>variation</code> function, which needs to be included in the initialization call.</td>
+					</tr>
+					<tr>
+						<td><a name="attr-variations"></a><code>light-variations</code></td>
+						<td>
+							<p>
+								List of size variations of the image (pairs of URL and width). Separate individual images with semicolon (<code>;</code>), and url and width with at sign (<code>@</code>).
+								For example, definition <code>"image1.jpg@100;image2.jpg@500"</code> lists two images, image1.jpg width width of 100 pixels, image2.jpg width width of 500 pixels.
+								Only width is supported, not height, and aspect ratio is presumed to be the same for every variation.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="spacer-p"></div>
+			<p>Example:</p>
+			<div class="exampleCode"><span class="code-blue">&lt;</span><span class="code-dred">a</span> <span class="code-red">href</span><span class="code-blue">="image.jpg"</span> <span class="code-red">class</span><span class="code-blue">="skLib-lightboxLink"</span> <span class="code-blue"><span class="code-red">light-gallery</span><span class="code-blue">="gallery1"</span> <span class="code-red">light-desc</span><span class="code-blue">="Lorem ipsum"</span> <span class="code-red">light-width</span><span class="code-blue">="3000"</span> <span class="code-red">light-height</span><span class="code-blue">="2000"</span> &gt;</span>Click to magnify<span class="code-blue">&lt;/</span><span class="code-dred">a</span><span class="code-blue">&gt;</span></div>
+
+
+
+
+
+			<div class="spacer"></div>
+			<h4>Link attributes specific to video and iframe</h4>
+			<p class="smallNote">
+				Most YouTube, Vimeo and Dailymotion links will be automatically detected and values for video code, player and embedded URL filled accordingly, so they don't have to be explicitly set.
+				But please check after entering any new URLs, because not all video hosting services and all of their URLs are supported for automatic detection.
+			</p>
+			<div class="spacer-p"></div>
+			<div class="tableScroll">
+				<table class="attributeList">
+					<tr>
+						<td><code>light-url</code></td>
+						<td>
+							<p>URL to use for the frame if different from linked URL.</p>
+							<p class="smallNote">
+								In some cases you might want to use one URL for link and different one for the frame shown in lightbox.
+								For example, if in lightbox the page should be without navigation and branding, but if a user chooses to open link in a new tab or window, or JavaScript is either not yet loaded or blocked, what the user sees should be the full version of the page.
+								Because of this we recommend that the URL in <code>href</code> attribute is set to what the user should see as if lightbox was not used at all.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td><code>light-video_code</code></td>
+						<td>Identifying code of the video. It's only used with supported <code>light-player</code> values.</td>
+					</tr>
+					<tr>
+						<td><code>light-player</code></td>
+						<td>Video player/service; supported are <code>"youtube"</code>, <code>"vimeo"</code>, and <code>"dailymotion"</code>.</td>
+					</tr>
+					<tr>
+						<td><code>light-ratio</code></td>
+						<td>
+							<p>Aspect ratio of the frame (e.g. <code>"16:9"</code> or <code>"1.7777"</code>).</p>
+							<p><b>Video:</b> Default value is <code>"16:9"</code>.</p>
+							<p><b>Frame:</b> Ratio is not fixed by default. You can either specify a specific ratio or set both width and height and set ratio to <code>1</code>, <code>yes</code> or <code>true</code>.</p>
+						</td>
+					</tr>
+					<tr>
+						<td><code>light-width</code>,<br /><code>light-height</code></td>
+						<td>
+							<p>Maximum dimensions of video or frame.</p>
+							<p><b>Video:</b> Default value of width is <code>10000</code>. Default height is calculated by ratio.</p>
+							<p><b>Frame:</b> If a specific aspect ratio is set and neither dimension is set, default width is <code>10000</code> and height is calculated by ratio.</p>
+							<p>If both dimensions and a specific aspect ratio is set (video: always; frame: if not left undefined), value of <code>light-ratio</code> is overriden by aspect ratio of specified width and height.</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+
+
+			<div class="delimiter"></div>
+			<div class="marginClear"></div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<h3>JavaScript initialization configuration</h3>
+		<div>
+			<p>
+				Function <code>skLib.lightbox.init(config)</code> accepts a configuration object to better adapt lightbox to the page where it's used.
+				Once set, configuration will be preserved even if you call <code>init</code> again, for example when you dynamically add, remove or change links.
+			</p>
+			<div class="spacer-p"></div>
+			<div class="tableScroll">
+				<table class="attributeList">
+					<tr>
+						<td><code>rootSelector</code></td>
+						<td>
+							<p>jQuery selector for a root container within <code>html</code> node that encompasses all content on the page, but is unstyled. In ASP.NET projects <code>"form"</code> can be used. Used for locking page scroll while lightbox is open.</p>
+							<p class="smallNote">
+								What happens is this: the root container is placed absolutely (100% width and height of the browser window) and content is scrolled within it so it appears as if nothing had changed.
+								This preserves current position on the page, while completely disabling page scrolling, even on mobile devices of which some would otherwise ignore <code>overflow</code> styles.
+							</p>
+							<p class="smallNote">
+								When lightbox is closed, previous styles are restored. Page is scrolled back to the point it was when lightbox was opened, so even without a root container the behaviour should be the same.
+								However, if lightbox's background is transparent, scrolling will be noticeable.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td><a name="linkSelector"></a><code>linkSelector</code></td>
+						<td>jQuery selector to find all links which should open in lightbox; default value is <code>".skLib-lightboxLink"</code>.</td>
+					</tr>
+					<tr>
+						<td><code>iconsDir</code></td>
+						<td>Folder where lightbox's icons are stored; default value is <code>"lightbox/images"</code>.</td>
+					</tr>
+					<tr>
+						<td><code>variation</code></td>
+						<td>
+							Function to select best-fitting variation of the image for the current screen size.
+							Parameters passed are <code>linkData</code>, <code>imageWidth</code>, <code>imageHeight</code>, <code>containerWidth</code>, <code>containerHeight</code>, <code>fitWidth</code>, <code>fitHeight</code>.
+						</td>
+					</tr>
+					<tr>
+						<td><code>isRtl</code></td>
+						<td>Whether or not to mirror interface for right-to-left languages; default value is derived from the directionality of <code>body</code> node (CSS <code>direction: rtl;</code>).</td>
+					</tr>
+					<tr>
+						<td><code>youtubeParams</code></td>
+						<td>Additional parameters to be used for YouTube videos; default value is <code>"autohide=1&amp;autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;theme=dark&amp;rel=0&amp;color=white"</code></td>
+					</tr>
+					<tr>
+						<td><code>vimeoParams</code></td>
+						<td>Additional parameters to be used for Vimeo videos; default value is <code>"title=0&amp;byline=0&amp;portrait=0&amp;fullscreen=1&amp;autoplay=1"</code></td>
+					</tr>
+					<tr>
+						<td><code>dailymotionParams</code></td>
+						<td>Additional parameters to be used for Dailymotion videos; default value is <code>"autoPlay=1&amp;related=0&amp;logo=0"</code></td>
+					</tr>
+					<tr>
+						<td><code>commands</code></td>
+						<td>
+							<p>
+								An array of additional toolbar commands, for example save to disk or share.
+								These commands are rendered as links: icon, name and target are defined globally, while specific URL is specified for each lightbox link separately.
+								If no URL is given, the command icon is not displayed.
+							</p>
+							<p>
+								Each command has the following values:
+								<code>icon</code> is URL of the icon image;
+								<code>text</code> is name of the command used in alt text and title attributes;
+								<code>attr</code> is the name of the attribute of a lightbox link which contains the URL of the command;
+								<code>target</code> is, well, target of the command link.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="spacer-p"></div>
+			<p>Example:</p>
+			<div class="exampleCode">$(document).ready(<span class="code-blue">function</span> ()
+{
+    skLib.lightbox.init({
+        rootSelector: <span class="code-dred">".pageRoot"</span>,
+        linkSelector: <span class="code-dred">".skLib-lightboxLink"</span>,
+        iconsDir: <span class="code-dred">"lightbox/images"</span>,
+        commands: [ { icon: <span class="code-dred">"lightbox/images/save.png"</span>, text: <span class="code-dred">"Save to disk"</span>, attr: <span class="code-dred">"light-save"</span> } ]
+    });
+});</div>
+			<div class="delimiter"></div>
+			<div class="marginClear"></div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<h3>Variations</h3>
+		<div>
+			<p>
+				There are two ways to use image variations. First is by specifying all images and their widths in link attributes.
+				The other option is to use a JavaScript function to generate the image URL based on the linked URL and browser size.
+				JavaScript function is the better choice if your web site can automatically resize images.
+				But if you're resizing images manually and don't want to use image variations on every lightbox link, listing the image variations in each link's attribute will suite you better.
+				In case you're using both, the attribute will take priority wherever it's set.
+			</p>
+			<div class="spacer"></div>
+			<p>
+				Here is an example of how to set it through an attribute.
+				Here <code>image1.jpg</code> is 1000px wide and <code>image2.jpg</code> is 500px wide; height is calculated according to the aspect ratio of the full image (2000×1500px or 4:3), 750px and 375px respectively.
+			</p>
+			<div class="exampleCode"><span class="code-blue">&lt;</span><span class="code-dred">a</span> <span class="code-red">href</span><span class="code-blue">="image.jpg"</span> <span class="code-red">class</span><span class="code-blue">="skLib-lightboxLink"</span> <span class="code-red">light-width</span><span class="code-blue">="2000"</span> <span class="code-red">light-height</span><span class="code-blue">="1500"</span> <span class="highlight"><span class="code-red">light-variations</span><span class="code-blue">="image1.jpg@1000;image2.jpg@500"</span></span><span class="code-blue">&gt;</span>Click to magnify<span class="code-blue">&lt;/</span><span class="code-dred">a</span><span class="code-blue">&gt;</span></div>
+
+			<div class="spacer"></div>
+			<p>
+				If you'd rather use a JavaScript function to generate URLs for all images' variations, this is how it can be done.
+				Lightbox will call the function configured in the first initialization with a number of parameters and expect it to return a URL of the image.
+			</p>
+			<p>The call looks something like this:</p>
+			<div class="exampleCode"><span class="code-blue">function</span> (linkData, imageWidth, imageHeight, containerWidth, containerHeight, fitWidth, fitHeight)</div>
+			<div class="spacer-p"></div>
+			<p>The parameters are:</p>
+			<div class="tableScroll">
+				<table class="attributeList">
+					<tr>
+						<td><code>linkData</code></td>
+						<td>
+							Object containing all information about the calling link and the slide to be displayed.
+							<div class="spacer-p"></div>
+							<table class="attributeList">
+								<tr><td><code>.link</code></td><td>Reference to <code>&lt;a&gt;</code> node.</td></tr>
+								<tr><td><code>.file</code></td><td>Linked URL.</td></tr>
+								<tr>
+									<td><code>.type</code></td>
+									<td>Type of link; possible values are <code>"image"</code>, <code>"video"</code>, <code>"iframe"</code>.</td>
+								</tr>
+								<tr><td><code>.gallery</code></td><td>Gallery identifier.</td></tr>
+								<tr><td><code>.descTitle</code></td><td>Slide title.</td></tr>
+								<tr><td><code>.desc</code></td><td>Slide description.</td></tr>
+								<tr>
+									<td><code>.image.width</code>,<br /><code>.image.height</code></td>
+									<td>Image width and height</td>
+								</tr>
+								<tr>
+									<td><code>.video.player</code></td>
+									<td>Video player service; possible values are <code>"youtube"</code>, <code>"vimeo"</code>.</td>
+								</tr>
+								<tr><td><code>.video.code</code></td><td>Code of the video.</td></tr>
+								<tr><td><code>.video.ratio</code></td><td>Video's ratio.</td></tr>
+								<tr>
+									<td><code>.video.width</code>,<br /><code>video.height</code></td>
+									<td>Max width and height of the video clip.</td>
+								</tr>
+								<tr>
+									<td><code>.iframe.width</code>,<br /><code>iframe.height</code></td>
+									<td>Max width and height of the iframe.</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td><code>imageWidth</code>,<br /><code>imageHeight</code></td>
+						<td>Dimensions of the original image, as defined in the lightbox link.</td>
+					</tr>
+					<tr>
+						<td><code>containerWidth</code>,<br /><code>containerHeight</code></td>
+						<td>Approximate dimensions of the container in which the image will be displayed. These dimensions do not include slide title and description, because image variation is requested before the slide is rendered.</td>
+					</tr>
+					<tr>
+						<td><code>fitWidth</code>,<br /><code>fitHeight</code></td>
+						<td>Recalculated dimensions of the image as it can be displayed.</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="spacer"></div>
+			<h4>Example</h4>
+			<p>
+				This example uses a fixed list of variations.
+				Each variation represents a limit of the longer side of the image; for example variation "500" may generate 500×300 or 300×500px images (among others), not 500×750px.
+				Variation is here appended to the end of file name, e.g. "image-500.jpg".
+			</p>
+			<div class="spacer-p"></div>
+			<div class="exampleCode"><span class="code-blue">function</span> lightboxVariation(linkData, imageWidth, imageHeight, containerWidth, containerHeight, fitWidth, fitHeight)
+{
+    <span class="code-green">// If image is smaller than container return original URL</span>
+    <span class="code-blue">if</span> ((imageWidth &lt; containerWidth) &amp;&amp; (imageHeight &lt; containerHeight)) <span class="code-blue">return</span> linkData.file; 
+
+    <span class="code-green">// Select the larger of two sides of the fitted image
+    // Add 15% to avoid blurring which happens when downscaled image is barely any smaller than original</span>
+    <span class="code-blue">var</span> largerSize = 1.15 * ((fitWidth &gt; fitHeight) ? fitWidth : fitHeight);
+
+    <span class="code-green">// Split URL into file path and extension</span>
+    <span class="code-blue">var</span> filePath = linkData.file;
+    <span class="code-blue">var</span> fileExt = <span class="code-dred">""</span>;
+    <span class="code-blue">var</span> n = filePath.lastIndexOf(<span class="code-dred">"."</span>);
+    <span class="code-blue">if</span> (n &gt;= 0) { fileExt = filePath.substring(n); filePath = filePath.substring(0, n); }
+
+    <span class="code-green">// Find the first variation that generates an image slightly larger than required</span>
+    <span class="code-blue">var</span> sizes = [500, 750, 1000, 1500, 2500]; <span class="code-green">// List of supported sizes in ascending order</span>
+    <span class="code-blue">for</span> (<span class="code-blue">var</span> x = 0; x &lt; sizes.length; x++)
+    {
+        <span class="code-blue">if</span> (largerSize &lt;= sizes[x]) <span class="code-blue">return</span> filePath + <span class="code-dred">"-"</span> + sizes[x] + fileExt;
+    }
+
+    <span class="code-blue">return</span> linkData.file; <span class="code-green">// No variation found: return original URL</span>
+}
+
+$(document).ready(<span class="code-blue">function</span> () { skLib.lightbox.init({ rootSelector: <span class="code-dred">".pageRoot"</span>, <span class="highlight">variation: lightboxVariation</span> }); });</div>
+
+			<div class="delimiter"></div>
+			<div class="marginClear"></div>
+		</div>
+
+
+
+
+
+
+
+
+
+		<h3>Commands</h3>
+		<div>
+			<p>
+				You can add additional command links to lightbox.
+				They will appear as icon links in the lightbox's toolbar and can link either to another URL or call a JavaScript method.
+				A couple of sample images are included in the lightbox package, but you can add your own.
+			</p>
+
+			<div class="spacer"></div>
+			<h4>1. Set icons</h4>
+			<p>In the JavaScript initialization of the lightbox set the list of icons to add to its toolbar. For example:</p>
+<div class="exampleCode">$(document).ready(<span class="code-blue">function</span> ()
+{
+    skLib.lightbox.init({
+<span class="highlight">        commands: [
+            { icon: <span class="code-dred">"lightbox/images/save.png"</span>, text: <span class="code-dred">"Save to disk"</span>, attr: <span class="code-dred">"light-save"</span>, target: <span class="code-dred">"_blank"</span> },
+            { icon: <span class="code-dred">"lightbox/images/share.png"</span>, text: <span class="code-dred">"Share"</span>, attr: <span class="code-dred">"light-share"</span> }
+        ]</span>
+    });
+});</div>
+			<div class="spacer-p"></div>
+			<p>
+				Above example sets two commands, one to save to disk and one to share.
+				URL can't be set here, because it's unique to each image.
+			</p>
+
+			<div class="spacer"></div>
+			<h4>2. Set link URL</h4>
+			<p>
+				The <code>attr</code> value of each command in itinialization is the name of the image link attribute from which the lightbox will pull the URL of the command.
+				If an URL is not specified for an image, the icon will be hidden on its slide.
+			</p>
+			<p>Example:</p>
+			<div class="exampleCode"><span class="code-blue">&lt;</span><span class="code-dred">a</span> <span class="code-red">href</span><span class="code-blue">="image.jpg"</span> <span class="highlight"><span class="code-red">light-save</span><span class="code-blue">="image.zip"</span> <span class="code-red">light-share</span><span class="code-blue">="javascript:shareImage('image.jpg');"</span></span> <span class="code-red">class</span><span class="code-blue">="skLib-lightboxLink"</span><span class="code-blue">&gt;</span>Click to magnify<span class="code-blue">&lt;/</span><span class="code-dred">a</span><span class="code-blue">&gt;</span></div>
+			<div class="spacer-p"></div>
+			<p>In this example save icon links to a .zip file, while share icon calls a local JavaScript method.</p>
+
+			<div class="delimiter"></div>
+			<div class="marginClear"></div>
+		</div>
+
+
+		<h4>Change log</h4>
+		<div>
+			<div class="tableScroll">
+				<table class="attributeList">
+					<tr>
+						<td><b>1.0.3</b></td>
+						<td>
+							<ul>
+								<li>Updates to video and iframe support:
+									<ul>
+										<li>Optional fixed ratio for frames (<code>light-ratio</code>).</li>
+										<li>Custom URL for embedding (<code>light-url</code>).</li>
+										<li>Automatic parsing of URLs for YouTube, Vimeo and Dailymotion (making <code>light-video_code</code> and <code>light-player</code> redundant in almost all cases).</li>
+									</ul>
+								</li>
+								<li>Changing slides with keyboard limited to once every 250ms to not overload the browser.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td><b>1.0.2</b></td>
+						<td><ul><li>Bug fixes.</li></ul></td>
+					</tr>
+					<tr>
+						<td><b>1.0.1</b></td>
+						<td>
+							<ul>
+								<li>Added support for mouse wheel.</li>
+								<li>Bug fixes.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td><b>1.0.0</b></td>
+						<td><ul><li>Initial release</li></ul></td>
+					</tr>
+				</table>
+			</div>
+			<div class="marginClear"></div>
+		</div>
+
+
+
+	</div>
+</body>
+</html>

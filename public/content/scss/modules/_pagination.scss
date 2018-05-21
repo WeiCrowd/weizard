@@ -1,0 +1,46 @@
+.pagination {
+    margin: 0;
+    li {
+        display: inline-block;
+
+        a {
+            text-align: center;
+            border: 1px solid transparent;
+            display: block;
+            background: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: $body-color;
+            margin-left: 8px;
+            position: relative;
+            @include square(32px);
+            @include border-radius(50% !important);
+            &.active {
+                color: $theme-color;
+                border-color: $theme-color;
+            }
+            &.visited {
+                font-size: 0;
+                border: none !important;
+                &:before {
+                    content: "";
+                    background: url(../images/svg-sprite.svg) no-repeat -14px -1758px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    @include square(100%);
+                }
+            }
+            &:hover, &:focus {
+                background: none;
+                border-color: $theme-color;
+                color: $theme-color;
+            }
+        }
+
+    }
+}

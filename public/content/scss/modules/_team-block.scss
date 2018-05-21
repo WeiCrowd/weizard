@@ -1,0 +1,30 @@
+.team-block {
+    font-size: 14px;
+    color: #4a4a4a;
+    display: inline-block;
+    .team-block-figure {
+        margin-bottom: 20px;
+        position: relative;
+        > img {
+            @include sphere(150px);
+        }
+    }
+    .team-block-heading {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
+        margin-bottom: 4px;
+    }
+    .team-block-social-link {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        @include square(32px);
+        &.linkedin-icon {
+            background-image: url(../images/linkedin.png);
+        }
+    }
+}

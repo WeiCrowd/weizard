@@ -1,0 +1,23 @@
+.searchbox {
+    background-color: #fff;
+    max-width: 420px;
+    height: 50px;
+    position: relative;
+    @include border-radius(40px);
+    @include shadow(0 0 8px 0 rgba(0, 0, 0, 0.08));
+    &:before {
+        content: "";
+        left: 20px;
+        background: url(../images/search-icon.svg) no-repeat;
+        @include square(18px);
+        @include vertically-centered();
+    }
+    .searchbox-input {
+        background: none;
+        border: none;
+        padding: 0 40px;
+        width: 100%;
+        height: 100%;
+        color: $body-color;
+    }
+}

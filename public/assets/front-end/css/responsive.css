@@ -1,0 +1,828 @@
+@media only screen and (max-width: 1340px) {
+	#validatesearchlotForm input, select{width:60%;}
+}
+/*@media only screen and (max-width: 1300px) {
+	#validateBidderForm{}
+}*/
+@media only screen and (max-width: 1320px) {
+#validatesearchlotForm .form-group > input{float: right; margin-right: 0; right: 11px !important; width: 57% !important;}	
+#validatesearchlotForm .form-group > select { float: right; width: 60%;}
+form#validatesearchlotForm span.text-danger { left: 264px;}
+}
+@media only screen and (max-width: 1280px) {
+.welcom-area .col-sm-3 {
+	margin-bottom: 15px;
+}
+.rangi-bnr-right figure img {
+	min-height: 556px;
+}
+.select2-container--default .select2-selection--multiple { width: 91%;}
+#validateBidderForm .Security #c_codee { right: 40px;}
+#validatesearchauctionForm .form-group { text-align: center;}
+#validatesearchauctionForm .select2-selection__clear { position: absolute; right: 0;}
+#validatesearchauctionForm .select2-container--default .select2-selection--multiple { height: auto;}
+
+}
+ @media only screen and (max-width: 1199px) {
+.Form .form-control {
+	width: 100%;
+}
+.Security a {
+	right: 24px;
+	top: 32px;
+}
+input#c_codee {
+	margin-left: 0;
+}
+.Form .form-control {
+	width: 93%;
+}
+a.tool {
+	right: 16px;
+	top: 30px;
+}
+form span.text-danger {
+	left: 17px;
+}
+.tabing li { margin: 0 12px;}
+.Form label { display: block;}
+.Security .form-control.capchacode { width: 93%;}
+.Securityhas-error button[disabled], html input[disabled] {position: absolute; right: 44px;}
+.Security a { right: 15px;}
+.select2-container { width: 93% !important;}
+
+.Securityhas-error button[disabled], html input[disabled] { position: absolute; right: 43px !important;}
+#validatesearchlotForm .form-group select { margin-left: -18px;}
+#validateBidderForm .Security .form-control.capchacode { width: 80%;}
+#validatesearchlotForm .form-group > input {width: 56.5% !important;}
+.View.Live.Auctions .Bidding-ac .form-control { width: 100% !important;}
+.Bidding-ac .select2-container {width: 100% !important;}
+.View.Live.Auctions .Bidding-ac label { margin-bottom: 10px;}
+#validatesearchauctionForm .form-group span.select2 { width: 100% !important; margin-bottom: 25px;}
+.View.Live.Auctions .Bidding-ac .form-group{ text-align:center;}
+#validateSellerForm .Address .Security .form-control.capchacode { width: 68%;}
+#validateSellerForm .Address span[for="6_letters_codee"] { bottom: 7px;}
+.Bidding-form .selected-lot .radio { width:100%; float:none;}
+}
+ @media only screen and (max-width: 1024px) {
+.homepage .container-fluid {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+a.tool {
+	background-image: url(../images/sprit.png);
+	background-position: -6px -224px;
+	cursor: pointer;
+	height: 23px;
+	width: 21px;
+	margin-left: 6px;
+	position: absolute;
+	right: -7px;
+	top: 33px;
+}
+.table-design tr td { white-space: nowrap;}
+}
+@media only screen and (max-width: 992px) {
+.forthcoming-area > .col-sm-6 {
+	width: 100%;
+}
+.forthcoming-area > .col-sm-6 figure > img {
+	width: 100%;
+	min-height: inherit;
+}
+.rangi-bnr-right .view-btn {
+	left: 10%;
+}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+	display: block !important;
+}
+.radio form {
+	margin-bottom: 20px;
+}
+.select2-container {
+	width: 99% !important;
+}
+.Form .form-control {
+	width: 99%;
+}
+.Form label {
+	width: 100%;
+}
+.tabing li a {
+  padding: 8px 11px;
+ }
+.tabing li {
+  margin: 0 2px 20px;
+ }
+ .table-respn {
+  overflow: auto;
+}
+.Form .form-control { width: 94%;}
+.select2-container--default .select2-selection--multiple { width: 94%;}
+a.tool { right: 12px;}
+.Security .form-control.capchacode { width: 92%;}
+.Security a { right: 16px; top: 32px;}
+#validateBidderForm .Security a { right: -12px;}
+#validatesearchauctionForm .select2-container--default.select2-container--focus .select2-selection--multiple { margin-bottom: 40px !important; outline: 0 none; width: 360px !important;}
+.Securityhas-error button[disabled], html input[disabled]{right: 39px;}
+.Auctions .create-auc { width: 100%;}
+.lot-status-form .btn-lot { margin-top: 25px;}
+#validateBidderForm span.select2-container--default { width: 94% !important;}
+#validateBidderForm .Security .form-control.capchacode { width: 83% !important;}
+#validatesearchlotForm .form-group > input{ float: none !important;
+    margin-bottom: 0;
+    margin-right: 6px;
+    position: static !important;
+    width: 100%!important;}	
+#validatesearchlotForm .form-group > select { float: none; width: 100%; margin:0;}
+.select2-container--open .select2-dropdown {
+  left: 0;
+  top: -40px;
+}
+#validatesearchauctionForm .form-group > .selection{ width:100% !important;}
+#validatesearchauctionForm .select2-selection.select2-selection--multiple{ width:100% !important;}
+#validatesearchauctionForm .select2-selection--multiple ul.select2-selection__rendered{ position: relative; width: 100%;}
+.Auctions .Bidding-ac { width: 80% !important;}
+#validatesearchlotForm .form-group { text-align: center;}
+#validateSellerForm .select2-container--default .select2-selection--multiple { width: 95% !important;}
+#validateSellerForm .Address .Security .form-control.capchacode { width: 85%;}
+}
+
+
+@media only screen and (max-width: 800px) {
+.title-form.digital { width: 100%;}
+#validateauctionForm .term-btn { width: 260px;}
+#validateBidderForm .Security a.refresh-icon { right: -12px !important;}
+.Auctions .Bidding-ac { width: 100%;}
+}
+
+@media only screen and (max-width: 767px) {
+.logo-area .col-sm-3 {
+	text-align: center;
+}
+.logo-area .col-sm-9 p {
+	text-align: center;
+}
+.navbar-toggle .icon-bar {
+	background: #ffc20e none repeat scroll 0 0;
+	width: 27px;
+}
+/*.nav > li {
+	border-bottom: 1px solid #ffc20e;
+}*/
+.navbar-right li {
+	border: none;
+}
+.homepage .container-fluid {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.homepage .welcom-area > p {
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 0;
+	margin-top: 10px;
+	text-shadow: 0 -1px 1px #ccc;
+}
+.welcom-area h1 {
+	font-size: 20px;
+}
+.homepage .forthcoming-area .multi-boxes .col-sm-4 > div {
+	top: 15px;
+}
+a[title="Help!"] {
+	position: absolute;
+	text-align: -webkit-left;
+	top: 32px;
+}
+.bidder-btn .col-sm-6 {
+	width: 112px;
+	float: left;
+}
+.homepage .Bidder-Registration .container-fluid {
+	padding: 0 10px;
+}
+.Security i {
+	position: absolute;
+	right: 12px;
+	top: 33px;
+}
+.textarea a[title="Help!"] {
+	top: 47px;
+}
+.last-update {
+	float: none;
+	margin-top: 0px;
+	text-align: center;
+}
+.list-counter {
+	margin-bottom: 40px;
+}
+.welcom-area {
+	margin: 18px 0;
+}
+.catogry-list > h6 span {
+	float: right;
+}
+.bidder-term {
+	width: 100% !important;
+	float: none;
+	text-align: center;
+}
+.bidder-btn .col-sm-2.bottom10, .bidder-btn .form-horizontal.row-border {
+	width: auto;
+	float: none;
+	display: inline-block;
+}
+.red-buttons {
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+	margin: 0 0 20px 0 !important;
+}
+.homepage .container-fluid.terms2 {
+	padding-left: 11px;
+}
+.list-counter li ol {
+	padding-left: 0;
+}
+.form-box {
+	float: none;
+	text-align: center;
+}
+.tabing {
+  margin-bottom: 14px;
+ }
+ .tabing li {
+  margin: 0 52px 20px 0;
+  width: 38%;
+}
+.View.Live.Auctions .Bidding-ac {
+  margin: auto;
+  width: 590px;
+}
+.Search.Auctions .form-control { width: 100%;}
+.terms {margin-left: 0;}
+.title-form.digital p {margin-left: 0;}
+.red-terms { margin-left: 0px;}
+.seller-registration .Form {padding-left: 70px;}
+.Form label strong { padding-left: 0px;}
+.Form .form-control { width: 94%;}
+.Security i { position: absolute; right: 31px; top: 3px;}
+.Security .form-control.capchacode {width: 72%;}
+.select2-container .select2-selection--multiple { width: 95%;}
+#validateBidderForm .Security .form-control.capchacode { width: 80%;}
+#validatesearchauctionForm .select2-container { margin-bottom: 25px; margin-right: 93px;}
+.Search.Auctions #validatesearchauctionForm .form-control { width: 60%;}
+#validateSellerForm .Security .form-control.capchacode { width: 80%;}
+#validateSellerForm .Security a { right: -15px; top: 32px;}
+.Auctions .seller-live-auc form{ width:80% !important;}
+.bid-history .hist-table { width: 100%;}
+#bid-histry .bid-hist { width: 95%;}
+.lot-status-form > form > .form-group > select { width: 100%;}
+.auction-lots-status .radio { margin: 15px 10px;}
+#validatesearchauctionForm .Search.Auctions .form-control { width: 100%!important;}
+
+}
+@media only screen and (max-width: 640px) {
+footer.container-fluid {
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+footer.container-fluid > ul {
+	float: none !important;
+	overflow: hidden;
+	width: 100%;
+}
+footer.container-fluid > div {
+	float: none !important;
+	margin-left: 11px;
+	margin-top: 15px;
+	text-align: left;
+	width: 100%;
+}
+footer ul li a {
+	color: #fff;
+	font-size: 12px;
+	padding: 0 8px;
+}
+.tabing li {
+  margin: 0 0px 20px 0;
+  width: 100%;
+}
+.View.Live.Auctions .Bidding-ac {
+ 
+  width: 100%;
+}
+.Auctions .chngPass-ac { width: 100%;}
+
+.Auctions .chngPass-ac .form-control {width: 100%; margin-left: 0;}
+.chngPass-ac .rules { margin-left: 0;}
+.Auctions .chngPass-ac .form-control { margin-left: 21px; width: 93%;}
+.Auctions .Bidding-ac { width: 90%;}
+.bid-history .hist-table { width: 100%;}
+#bid-histry .bid-hist {width: 95%;}
+#validatesearchlotForm .form-group select { margin-left: 0; width:100%;}
+
+}
+@media (min-width:0px) and (max-width:600px) {
+.modal-body.user-form {padding: 40px 22px;}
+.Auctions .view-live-area .Regist-box { width: 85%;}
+.Auctions .Bidding-ac { width: 100%!important;}
+.Search.Auctions #validatesearchauctionForm .form-control { width: 100% !important;}
+}
+@media only screen and (max-width: 500px) {
+.Auctions .chngPass-ac { width: 100%;}
+.Auctions .chngPass-ac .form-group label { padding-left: 0;}
+.Auctions .chngPass-ac .form-control {width: 100%; margin-left: 0;}
+.chngPass-ac .rules { margin-left: 0;}
+.Auctions .view-live-area .Regist-box { width: 75%;}
+#validateBidderForm .Security a.refresh-icon { right: 26px !important;}
+}
+@media only screen and (max-width: 480px) {
+.catogry-list > h6 span {
+	margin-left: 28px;
+}
+.events-area .box-img {
+	margin: auto;
+	width: 138px;
+}
+.owl-nav .owl-next {
+	right: -10px;
+}
+.owl-nav .owl-prev {
+	left: -10px;
+}
+.rangi-bnr-right .view-btn {
+	bottom: 16%;
+}
+.bidder-btn .col-sm-6 {
+	width: 100%;
+	float: none;
+	margin-bottom: 10px;
+	display: grid;
+}
+.Security i {
+	right: 3px;
+}
+.last-update span {
+	font-size: 12px;
+}
+.form-box .checkbox-inline + .checkbox-inline, .form-box .radio-inline + .radio-inline {
+	margin-top: 0;
+	margin-left: 0;
+}
+.container.radio {
+	padding-right: 0;
+}
+.welcom-area h1 {
+	font-size: 18px;
+}
+.tabing li a {
+  padding: 8px 11px;
+  width: 100%;
+}
+.dashboard-detail li { 
+  margin: 0 0 18px;
+ 
+  width: 94%;
+}
+.dashboard-detail {  padding: 15px 0 0;}
+.Bidder-Registration .Form { padding: 0;}
+#myModal .form-group .user, #myModal .form-group .lock {
+	margin: 0 -16px 0 0;
+}
+.log-form input {
+	width: 74%;
+}
+.radio label {
+	font-size: 16px;
+}
+.radio .radio-inline input {
+	margin-top: 5px;
+}
+.chngPass-ac .button {
+  width: 101px;
+}
+a.tool { right: 4px;}
+.browse-box input { min-height: 35px; width: 100%;}
+.Security i { right: -14px;}
+.row { margin-left: 0  !important; margin-right: 0 !important;}
+.seller-registration .Form { padding: 0;}
+.Form label strong { padding-left: 40px;}
+.Form label strong::before { left: 3px; top: 0;}
+#validateBidderForm .Security a { right: 29px;}
+.header-dashboard-section .header-logindetail { display: block; width: 270px;}
+#validateSellerForm .Security a { right: 25px;}
+.auction-table .table-respn th{ padding:0px;}
+.bidding-floor .table-respn th{ padding:0px;}
+.Auctions .seller-live-auc form { width: 100% !important; margin: auto auto 13px 2px;}
+.Auctions .form-control{ width:100%;}
+.seller-live .seller-btn{ width:100%;}
+}
+@media (min-width:0px) and (max-width:420px) {
+.bidding-floor .nav-pills > li { width: 100%; margin-bottom:10px;}
+.Auctions .seller-live-auc form { width: 100%;}
+.seller-live .seller-btn { width: auto;}
+}
+@media (min-width:0px) and (max-width:360px) {
+.Auctions .view-live-area .form-control { width: 100%;}
+.Live .button { margin-left: -19px;}
+.bidding-floor .nav-pills > li { width: 100%; margin-bottom:10px;}
+}
+.welcom-area .col-sm-3 {
+	margin-bottom: 15px;
+}
+.rangi-bnr-right figure img {
+	min-height: 556px;
+}
+.select2-container--default .select2-selection--multiple { width: 91%;}
+
+}
+ @media only screen and (max-width: 1199px) {
+.Form .form-control {
+	width: 100%;
+}
+.Security a {
+	right: 24px;
+	top: 32px;
+}
+input#c_codee {
+	margin-left: 0;
+}
+.Form .form-control {
+	width: 93%;
+}
+a.tool {
+	right: 16px;
+	top: 30px;
+}
+form span.text-danger {
+	left: 17px;
+}
+.tabing li { margin: 0 12px;}
+.Form label { display: block;}
+.Security .form-control.capchacode { width: 93%;}
+.Securityhas-error button[disabled], html input[disabled] {position: absolute; right: 44px;}
+.Security a { right: 15px;}
+.select2-container { width: 93% !important;}
+
+.Securityhas-error button[disabled], html input[disabled] { position: absolute; right: 43px !important;}
+#validatesearchlotForm .form-group select { margin-left: -18px;}
+#validatesearchauctionForm .form-group label + select { width: 100%;}
+}
+ @media only screen and (max-width: 1024px) {
+.homepage .container-fluid {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+a.tool {
+	background-image: url(../images/sprit.png);
+	background-position: -6px -224px;
+	cursor: pointer;
+	height: 23px;
+	width: 21px;
+	margin-left: 6px;
+	position: absolute;
+	right: -7px;
+	top: 33px;
+}
+.table-design tr td { white-space: nowrap;}
+}
+@media only screen and (max-width: 992px) {
+.forthcoming-area > .col-sm-6 {
+	width: 100%;
+}
+.forthcoming-area > .col-sm-6 figure > img {
+	width: 100%;
+	min-height: inherit;
+}
+.rangi-bnr-right .view-btn {
+	left: 10%;
+}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+	display: block !important;
+}
+.radio form {
+	margin-bottom: 20px;
+}
+.select2-container {
+	width: 99% !important;
+}
+.Form .form-control {
+	width: 99%;
+}
+.Form label {
+	width: 100%;
+}
+.tabing li a {
+  padding: 8px 11px;
+ }
+.tabing li {
+  margin: 0 2px 20px;
+ }
+ .table-respn {
+  overflow: auto;
+}
+.Form .form-control { width: 94%;}
+.select2-container--default .select2-selection--multiple { width: 94%;}
+a.tool { right: 12px;}
+.Security .form-control.capchacode { width: 92%;}
+.Security a { right: 16px; top: 32px;}
+#validateBidderForm .Security a { right: -12px;}
+#validatesearchauctionForm .select2-container--default.select2-container--focus .select2-selection--multiple { margin-bottom: 40px !important; outline: 0 none; width: 360px !important;}
+.Securityhas-error button[disabled], html input[disabled]{right: 39px;}
+.Auctions .create-auc { width: 100%;}
+.lot-status-form .btn-lot { margin-top: 25px;}
+#validateBidderForm .select2-container { width: 93% !important;}
+.Auctions .Bidding-ac { width: 100%;}
+}
+@media only screen and (max-width: 800px) {
+.title-form.digital { width: 100%;}
+#validateauctionForm .term-btn { width: 260px;}
+}
+
+@media only screen and (max-width: 767px) {
+.logo-area .col-sm-3 {
+	text-align: center;
+}
+.logo-area .col-sm-9 p {
+	text-align: center;
+}
+.navbar-toggle .icon-bar {
+	background: #ffc20e none repeat scroll 0 0;
+	width: 27px;
+}
+/*.nav > li {
+	border-bottom: 1px solid #ffc20e;
+}*/
+.navbar-right li {
+	border: none;
+}
+.homepage .container-fluid {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.homepage .welcom-area > p {
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 0;
+	margin-top: 10px;
+	text-shadow: 0 -1px 1px #ccc;
+}
+.welcom-area h1 {
+	font-size: 20px;
+}
+.homepage .forthcoming-area .multi-boxes .col-sm-4 > div {
+	top: 15px;
+}
+a[title="Help!"] {
+	position: absolute;
+	text-align: -webkit-left;
+	top: 32px;
+}
+.bidder-btn .col-sm-6 {
+	width: 112px;
+	float: left;
+}
+.homepage .Bidder-Registration .container-fluid {
+	padding: 0 10px;
+}
+.Security i {
+	position: absolute;
+	right: 12px;
+	top: 33px;
+}
+.textarea a[title="Help!"] {
+	top: 47px;
+}
+.last-update {
+	float: none;
+	margin-top: 0px;
+	text-align: center;
+}
+.list-counter {
+	margin-bottom: 40px;
+}
+.welcom-area {
+	margin: 18px 0;
+}
+.catogry-list > h6 span {
+	float: right;
+}
+.bidder-term {
+	width: 100% !important;
+	float: none;
+	text-align: center;
+}
+.bidder-btn .col-sm-2.bottom10, .bidder-btn .form-horizontal.row-border {
+	width: auto;
+	float: none;
+	display: inline-block;
+}
+.red-buttons {
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+	margin: 0 0 20px 0 !important;
+}
+.homepage .container-fluid.terms2 {
+	padding-left: 11px;
+}
+.list-counter li ol {
+	padding-left: 0;
+}
+.form-box {
+	float: none;
+	text-align: center;
+}
+.tabing {
+  margin-bottom: 14px;
+ }
+ .tabing li {
+  margin: 0 52px 20px 0;
+  width: 38%;
+}
+.View.Live.Auctions .Bidding-ac {
+  margin: auto;
+  width: 590px;
+}
+.Search.Auctions .form-control { width: 100%;}
+.terms {margin-left: 0;}
+.title-form.digital p {margin-left: 0;}
+.red-terms { margin-left: 0px;}
+.seller-registration .Form {padding-left: 70px;}
+.Form label strong { padding-left: 0px;}
+.Form .form-control { width: 94%;}
+.Security i { position: absolute; right: 31px; top: 3px;}
+.Security .form-control.capchacode {width: 72%;}
+.select2-container .select2-selection--multiple { width: 95%;}
+#validateBidderForm .Security .form-control.capchacode { width: 80%;}
+#validatesearchauctionForm .select2-container { margin-bottom: 25px; margin-right: 93px;}
+.Search.Auctions #validatesearchauctionForm .form-control { width: 60%;}
+#validateSellerForm .Security .form-control.capchacode { width: 80%;}
+#validateSellerForm .Security a { right: -15px; top: 32px;}
+.Auctions .seller-live-auc form{ width:80% !important;}
+.bid-history .hist-table { width: 100%;}
+#bid-histry .bid-hist { width: 95%;}
+.lot-status-form > form > .form-group > select { width: 100%;}
+.auction-lots-status .radio { margin: 15px 10px;}
+.Dashboard .tabing li {width: 100%;}
+}
+@media only screen and (max-width: 640px) {
+footer.container-fluid {
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+footer.container-fluid > ul {
+	float: none !important;
+	overflow: hidden;
+	width: 100%;
+}
+footer.container-fluid > div {
+	float: none !important;
+	margin-left: 11px;
+	margin-top: 15px;
+	text-align: left;
+	width: 100%;
+}
+footer ul li a {
+	color: #fff;
+	font-size: 12px;
+	padding: 0 8px;
+}
+.tabing li {
+  margin: 0 0px 20px 0;
+  width: 100%;
+}
+.View.Live.Auctions .Bidding-ac {
+ 
+  width: 100%;
+}
+.Auctions .chngPass-ac { width: 100%;}
+
+.Auctions .chngPass-ac .form-control {width: 100%; margin-left: 0;}
+.chngPass-ac .rules { margin-left: 0;}
+.Auctions .chngPass-ac .form-control { margin-left: 21px; width: 93%;}
+.Auctions .Bidding-ac { width: 90%;}
+.bid-history .hist-table { width: 100%;}
+#bid-histry .bid-hist {width: 95%;}
+#validatesearchlotForm .form-group select { margin-left: 0; width:100%;}
+
+}
+@media (min-width:0px) and (max-width:600px) {
+.modal-body.user-form {padding: 40px 22px;}
+.Auctions .view-live-area .Regist-box { width: 85%;}
+}
+@media only screen and (max-width: 500px) {
+.Auctions .chngPass-ac { width: 100%;}
+.Auctions .chngPass-ac .form-group label { padding-left: 0;}
+.Auctions .chngPass-ac .form-control {width: 100%; margin-left: 0;}
+.chngPass-ac .rules { margin-left: 0;}
+.Auctions .view-live-area .Regist-box { width: 75%;}
+.Search.Auctions #validatesearchauctionForm .form-control { width: 100%;}
+}
+@media only screen and (max-width: 480px) {
+.catogry-list > h6 span {
+	margin-left: 28px;
+}
+.events-area .box-img {
+	margin: auto;
+	width: 138px;
+}
+.owl-nav .owl-next {
+	right: -10px;
+}
+.owl-nav .owl-prev {
+	left: -10px;
+}
+.rangi-bnr-right .view-btn {
+	bottom: 16%;
+}
+.bidder-btn .col-sm-6 {
+	width: 100%;
+	float: none;
+	margin-bottom: 10px;
+	display: grid;
+}
+.Security i {
+	right: 3px;
+}
+.last-update span {
+	font-size: 12px;
+}
+.form-box .checkbox-inline + .checkbox-inline, .form-box .radio-inline + .radio-inline {
+	margin-top: 0;
+	margin-left: 0;
+}
+.container.radio {
+	padding-right: 0;
+}
+.welcom-area h1 {
+	font-size: 18px;
+}
+.tabing li a {
+  padding: 8px 11px;
+  width: 100%;
+}
+.dashboard-detail li { 
+  margin: 0 0 18px;
+ 
+  width: 94%;
+}
+.dashboard-detail {  padding: 15px 0 0;}
+.Bidder-Registration .Form { padding: 0;}
+#myModal .form-group .user, #myModal .form-group .lock {
+	margin: 0 -16px 0 0;
+}
+.log-form input {
+	width: 74%;
+}
+.radio label {
+	font-size: 16px;
+}
+.radio .radio-inline input {
+	margin-top: 5px;
+}
+.chngPass-ac .button {
+  width: 101px;
+}
+a.tool { right: 4px;}
+.browse-box input { min-height: 35px; width: 100%;}
+.Security i { right: -14px;}
+.row { margin-left: 0  !important; margin-right: 0 !important;}
+.seller-registration .Form { padding: 0;}
+.Form label strong { padding-left: 40px;}
+.Form label strong::before { left: 3px; top: 0;}
+#validateBidderForm .Security a { right: 29px;}
+.header-dashboard-section .header-logindetail { display: block; width: 270px;}
+#validateSellerForm .Security a { right: 25px;}
+.auction-table .table-respn th{ padding:0px;}
+.bidding-floor .table-respn th{ padding:0px;}
+.Auctions .seller-live-auc form { width: 100% !important; margin: auto auto 13px 2px;}
+.Auctions .form-control{ width:100%;}
+.seller-live .seller-btn{ width:100%;}
+.online-auctions .auction-status-lot .footer-pagniation ul { float: right; margin-bottom: 25px;}
+#validateForgotPwdForm #log_in span.text-danger { left: 23%;}
+#validateForgotPwdForm .recvr_btn .btn { width: 100%;}
+}
+@media (min-width:0px) and (max-width:420px) {
+.bidding-floor .nav-pills > li { width: 100%; margin-bottom:10px;}
+.Auctions .seller-live-auc form { width: 100%;}
+.seller-live .seller-btn { width: auto;}
+#del-multiple-auction { margin-top: 5px;}
+#validateSellerForm .Address .Security input#c_codee { right: 38px !important;}
+.auc-bidding .bidding-box .nav.nav-tabs.tabbing > li {
+  margin-bottom: 10px;
+  width: 100%;
+}
+}
+@media (min-width:0px) and (max-width:360px) {
+.Auctions .view-live-area .form-control { width: 100%;}
+.Live .button { margin-left: -19px;}
+.bidding-floor .nav-pills > li { width: 100%; margin-bottom:10px;}
+}

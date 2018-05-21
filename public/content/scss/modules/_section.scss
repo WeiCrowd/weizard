@@ -1,0 +1,233 @@
+.section {
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    font-size: 20px;
+    @include extra-large {
+        padding: 233px 0;
+    }
+    @include small {
+        padding: 50px 0;
+    }
+    @include extra-small {
+        padding: 40px 0;
+        font-size: 18px;
+    }
+    &.with-bg {
+        background-color: #fafafa;
+    }
+    &.has-less-spacing {
+        padding: 80px 0;
+    }
+    &.has-section-grid {
+        .section-heading {
+            margin-bottom: 20px;
+            + .section-tagline {
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &.dark-bg {
+        color: #fff;
+        .section-tagline {
+            color: #fff;
+        }
+    }
+    &.has-roadmap-bg {
+        background: $body-color;
+    }
+    .section-heading {
+        font-size: 36px;
+        margin-bottom: 50px;
+        font-weight: normal;
+        letter-spacing: -0.4px;
+        @include small {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        @include extra-small {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        + .section-tagline {
+            margin-top: -30px;
+            margin-bottom: 35px;
+            @include extra-small {
+                margin-top: -10px;
+                margin-bottom: 20px;
+            }
+        }
+        &.small-heading {
+            font-size: 32px;
+            margin-bottom: 25px;
+            @include small {
+                font-size: 28px;
+            }
+        }
+    }
+    .section-tagline {
+        color: $body-color;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+}
+
+.section-token-value-distribution {
+    background-image: url(../images/section-token-value-bg.png);
+    min-height: 775px;
+    @include extra-small {
+        background: $theme-color !important;
+    }
+}
+
+.section-card-list {
+    display: flex;
+    justify-content: center;
+    @include extra-small {
+        display: block;
+        .section-card {
+            width: 100%;
+            margin-left: 0 !important;
+            margin-top: 20px;
+
+        }
+    }
+    .section-card {
+        margin-left: 35px;
+        &:first-child {
+            margin: 0;
+        }
+    }
+}
+
+.section-card {
+    background-color: #fff;
+    padding: 30px 25px;
+    font-size: 14px;
+    width: 310px;
+    line-height: 1.43;
+    text-align: center;
+    @include border-radius(8px);
+    @include shadow(0 0 24px 0 rgba(0, 0, 0, 0.08));
+    .section-card-heading {
+        font-size: 20px;
+        font-weight: 500;
+        color: $theme-color;
+        &.small-heading {
+            font-size: 16px;
+        }
+    }
+    .section-card-figure {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 24px;
+        figcaption {
+            margin-top: 40px;
+        }
+    }
+    .primary-btn {
+        width: 188px;
+        display: block;
+        margin: 0 auto 10px;
+    }
+}
+
+.section-press {
+    padding: 20px 0;
+    .owl-carousel {
+        .item {
+            display: flex;
+            align-items: center;
+            img {
+                margin: 0 auto;
+                width: inherit;
+            }
+        }
+    }
+}
+
+.section-social.section {
+    background-color: #f5f7fa;
+    @include extra-small {
+        display: none;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: space-around;
+        li {
+            margin: 40px 0 40px 70px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.section-token-value-distribution {
+    .section-list-wrap {
+        margin-top: 80px;
+    }
+}
+
+.section-first-token .container {
+    max-width: 1100px;
+}
+
+#token-value-distribution-chart {
+    @include square(300px);
+}
+
+.chart-wrap {
+    position: relative;
+    @include square(300px);
+    .chart-area-heading {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        @include absolute-centered();
+    }
+}
+
+#token-value-distribution-legend {
+    table {
+        color: #fff !important;
+        margin-top: 40px;
+        td {
+            padding: 10px 5px;
+        }
+    }
+    .legendColorBox {
+        > div {
+            border: none !important;
+        }
+        div {
+            border-width: 9px !important;
+            @include border-radius(50%);
+        }
+    }
+}
+
+.section-list-wrap {
+    .section-list-heading {
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    .section-list {
+        li {
+            margin-left: 18px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .list-item-heading {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}

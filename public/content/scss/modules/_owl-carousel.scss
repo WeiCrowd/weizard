@@ -1,0 +1,42 @@
+.owl-carousel {
+    .owl-dots {
+        text-align: center;
+        margin-top: 30px;
+        .owl-dot {
+            @include square(12px);
+            @include border-radius(50%);
+            display: inline-block;
+            margin-left: 12px;
+            border: 1px solid $theme-color-light;
+            &:first-child {
+                margin-left: 0;
+            }
+            &.active {
+                background-color: $theme-color-light;
+            }
+            @include large {
+                &:hover,
+                &.active {
+                    background-color: $theme-color-light;
+                }
+            }
+            @include small {
+                @include square(18px);
+            }
+        }
+    }
+    .owl-prev,
+    .owl-next {
+        @include translate(0%, -50%);
+        @include position(absolute, $top: 50%);
+    }
+    .owl-prev {
+        left: -50px;
+    }
+    .owl-next {
+        right: -50px;
+    }
+    .owl-item img {
+        transform-style: flat;
+    }
+}

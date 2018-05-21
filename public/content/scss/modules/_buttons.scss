@@ -1,0 +1,142 @@
+.primary-btn {
+    background-color: $theme-color;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 16px 26px;
+    text-transform: uppercase;
+    border: 1px solid $theme-color;
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    outline: none !important;
+    position: relative;
+    min-width: 160px;
+    z-index: 1;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    @include transition(350ms);
+    @include border-radius(35px);
+    &.is-slim {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-weight: normal;
+        text-transform: none;
+    }
+    &.is-small {
+        min-width: 120px;
+        padding: 9px 20px;
+        font-size: 12px;
+    }
+    &.theme2-btn {
+        background-color: $theme-color2;
+        border-color: $theme-color2;
+    }
+    &.theme3-btn {
+        background-color: $theme-color3;
+        border-color: $theme-color3;
+    }
+    &.is-ghost-btn {
+        background-color: transparent;
+        color: #fff;
+        border-color: #fff;
+    }
+    &.prev-btn {
+        border-color: #eaebed;
+        color: #a4a8b1;
+    }
+    &.theme-btn {
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+    &.light-btn {
+        background-color: $theme-color-light;
+        border-color: $theme-color-light;
+    }
+    &.dark-btn {
+        background-color: #1e4289;
+        border-color: #1e4289;
+    }
+    &.white-btn {
+        background-color: #fff;
+        border-color: #fff;
+        color: $theme-color;
+    }
+    &.icon-btn {
+        padding: 0;
+        min-width: inherit;
+    }
+    &.big-btn {
+        font-size: 18px;
+    }
+    &.has-btn-icon {
+        padding-bottom: 13px;
+    }
+    &.has-shadow {
+        @include shadow(0 0 4px 0 rgba(0, 0, 0, 0.16));
+    }
+    &.theme-color {
+        &:hover,
+        &:focus {
+            color: #fff !important;
+        }
+    }
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: $theme-color2;
+        border-color: $theme-color2;
+        @include shadow(2px 2px 6px rgba(0, 0, 0, 0.26));
+    }
+    @include extra-small {
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+    .btn-icon {
+        position: relative;
+        top: -2px;
+        margin-right: 15px;
+    }
+}
+
+.highlight-btn {
+    width: 240px;
+}
+
+.next-btn,
+.prev-btn {
+    &:before {
+        content: "";
+        background-image: url(../images/svg-sprite.svg);
+        background-repeat: no-repeat;
+        @include vertically-centered();
+        @include square(100%);
+        @include extra-small {
+            display: none;
+        }
+    }
+}
+
+.next-btn {
+    &:before {
+        background-position: 118px -1899px;
+        right: 15px;
+    }
+}
+
+.prev-btn {
+    &:before {
+        background-position: -20px -1831px;
+        left: 15px;
+    }
+    &:hover,&:focus {
+      &:before {
+        background-position: -23px -1951px;
+    }  
+    }
+}

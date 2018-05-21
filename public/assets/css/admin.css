@@ -1,0 +1,168 @@
+.fa-help {
+	background-position: -6px -224px;
+	cursor: pointer;
+	height: 23px;
+	width: 21px;
+	margin-right: t;
+	margin-left: 6px;
+	color: black;
+	background-image: url("http://auction.multisitedrupal.com/assets/dist/img/sprit.png");
+	font-size: 0;
+}
+#validateBidderForm .form-control {
+	width: 90%;
+}
+#validateBidderForm .form-group.col-md-6 a.tool {
+	position: absolute;
+	right: 15px;
+	top: 18px;
+}
+.btn-highlight {
+	background-color: #e3beae;
+	height: 93px;
+	position: relative;
+	width: 480px; margin-left: 16px;
+}
+.btn-highlight label {
+	background-color: #e3beae;
+	height: 93px;
+	color: #000;
+}
+.btn-highlight .mandetory {
+	color: #000;
+}
+.btn-highlight #status {
+  left: 17px;
+  position: absolute;
+  top: 27px;
+  width: 93%;
+}
+input:focus[value="DELETE"], input:hover[value="DELETE"], input:active[value="DELETE"] {
+	background-color: #7d7b7b !important;
+	border-color: #7d7b7b !important;
+	color: #fff;
+}
+input[value="UPDATE"] {
+	background-color: #9b9a9a;
+	border-color: #9b9a9a;
+	color: #fff;
+}
+input:hover[value="UPDATE"], input:focus[value="UPDATE"], input.btn-success:active:hover[value="UPDATE"] {
+	background-color: #b2b0b0;
+	border-color: #b2b0b0;
+	color: #fff;
+}
+.pe-7s-help1 {
+	color: #fff !important;
+}
+.btn.active, .btn:active {
+	box-shadow: none;
+}
+.form-group select {
+  -moz-appearance: none;  -webkit-appearance: none; -ms-appearance: none;
+  background-image: url("http://auction.multisitedrupal.com/assets/dist/img/aero-down.png") !important;
+  background-position: right center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  padding-right: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.table th:last-child {
+	width: 82px;
+	text-align: center;
+}
+label.organisation::before {
+	background-image: url("http://auction.multisitedrupal.com/assets/dist/img/sprit.png") !important;
+	background-position: -4px -6px;
+	content: "";
+	height: 39px;
+	left: 0;
+	position: absolute;
+	width: 26px;
+}
+label.organisation {
+	line-height: 29px;
+	margin-bottom: 10px;
+	margin-top: 14px;
+	padding-left: 36px;
+	position: relative;
+}
+label.address::before {
+	background-image: url("http://auction.multisitedrupal.com/assets/dist/img/sprit.png") !important;
+	background-position: -4px -48px;
+	content: "";
+	height: 39px;
+	left: 0;
+	position: absolute;
+	width: 26px;
+}
+label.address {
+	line-height: 29px;
+	margin-bottom: 10px;
+	margin-top: 14px;
+	padding-left: 36px;
+	position: relative;
+}
+label.sales_tax::before {
+	background-image: url("http://auction.multisitedrupal.com/assets/dist/img/sprit.png") !important;
+	background-position: -7px -91px;
+	content: "";
+	height: 39px;
+	left: 0;
+	position: absolute;
+	width: 26px;
+}
+label.sales_tax {
+	line-height: 29px;
+	margin-bottom: 10px;
+	margin-top: 14px;
+	padding-left: 36px;
+	position: relative;
+}
+label {
+	font-weight: 500;
+}
+.form-horizontal .form-group {
+	margin-left: 0;
+	margin-right: 0;
+}
+.main-filter-dv .acc-bg {
+	margin-left: 0;
+	margin-right: 0;
+}
+.main-filter-dv .acc-bg {
+	background-color: #e3beae;
+}
+select.text-danger { color: #999 !important;}
+input.text-danger { color: #000 !important;}
+#validateBidderForm .btn-highlight a.tool {
+  position: absolute;
+  right: -24px !important;
+  top: 18px;
+}
+.panel.panel-success.lobidisable.lobipanel.lobipanel-sortable .nav-tabs > li{ width:103px;}
+.panel.panel-success.lobidisable.lobipanel.lobipanel-sortable .nav > li > a { font-size: 12px; text-align: center;}
+.modal-lg { width: 600px;}
+.modal-title { font-size: 20px;}
+#validateauctionForm .form-control-feedback { top: 7px;}
+.lobidisable button[title="Add"] {
+  background-color: #9e9e9e;
+  border-color: #9e9e9e;
+}
+.lobidisable button[title="Add"]:hover{
+  background-color: #b0afaf;
+  border-color: #b0afaf;
+}
+#tab2 input[type="checkbox"] { margin: 7px 8px 0 !important;}
+#tab2 table tr, #tab2 table th{ text-align:center;}
+#tab2 .table th:last-child {text-align: center; width: auto;}
+#tab2 .table th input#select_all{ margin-left: -5px !important;}
+#validateauctionForm .btn-primary { background-color: #d12b3f; border-color: #d12b3f;}
+select::-ms-expand { display: none; }
+select { -webkit-appearance:none; -moz-appearance:none; -o-appearance:none; appearance:none; }
+input::-ms-clear, input::-ms-reveal { display: none; }
+.panel-title h4{ font-size:16px !important;}
+.dropdown-menu{ min-width:80px !important;}
